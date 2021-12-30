@@ -48,6 +48,7 @@ Notify.test_email('you@example.com', 'Message Subject', 'Message Body').deliver_
 >
 > Config SSL Part
 
+#### 9- goto : `https://Your-FQDN/`
 
 Done!
 
