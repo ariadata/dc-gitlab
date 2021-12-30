@@ -13,7 +13,7 @@
 bash <(curl -Ls https://gist.github.com/pcmehrdad/2fbc9651a6cff249f0576b784fdadef0/raw)
 ```
 ---
-#### 2- Login as Normal User and clone these repository to your system :
+#### 2- Login as `Normal User` and clone these repository to your system :
 ```sh
 git clone https://github.com/ariadata/dc-gitlab.git
 ```
