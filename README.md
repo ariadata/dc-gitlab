@@ -15,29 +15,25 @@ bash <(curl -Ls https://gist.github.com/pcmehrdad/2fbc9651a6cff249f0576b784fdade
 ---
 #### 2- Login as `Normal User` and clone these repository to your system :
 ```sh
-git clone https://github.com/ariadata/dc-gitlab.git
+git clone https://github.com/ariadata/dc-gitlab.git && cd dc-gitlab && rm -rf .git
 ```
-#### 3- cd into created folder :
-```sh
-cd dc-gitlab
-```
-#### 4- edit `docker-compose.yml` ( lines : 7,10 ) according to your FQDN :
-#### 5- Run docker-compose file by using :
+#### 3- edit `docker-compose.yml` ( lines : 7,10 ) according to your FQDN :
+#### 4- Run docker-compose file by using :
 ```sh
 docker-compose up -d
 ```
-#### 6- set root login password for gitlab:
+#### 5- set root login password for gitlab:
 ```sh
 docker exec -it gitlab bash
 gitlab-rake "gitlab:password:reset[root]"
 ```
-#### 7- (optional) change [gitlab smtp mail settings](https://docs.gitlab.com/omnibus/settings/smtp.html) , use these commands to save and check:
+#### 6- (optional) change [gitlab smtp mail settings](https://docs.gitlab.com/omnibus/settings/smtp.html) , use these commands to save and check:
 ```sh
 gitlab-ctl reconfigure
 gitlab-rails console
 Notify.test_email('you@example.com', 'Message Subject', 'Message Body').deliver_now
 ```
-#### 8- Goto Nginx-Proxy-Manager admin panel and add this stack as proxy-host :
+#### 7- Goto Nginx-Proxy-Manager admin panel and add this stack as proxy-host :
 > Domain : `Your-FQDN` you must pointed it before!
 > 
 > Schema : `https`
