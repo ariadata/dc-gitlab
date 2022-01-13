@@ -22,7 +22,7 @@ git clone https://github.com/ariadata/dc-gitlab.git && cd dc-gitlab && rm -rf .g
 ```sh
 docker-compose up -d
 ```
-#### 5- set root login password for gitlab:
+#### 5- set root login password for gitlab (** wait atleast 1 minute before these **):
 ```sh
 docker exec -it gitlab bash
 gitlab-rake "gitlab:password:reset[root]"
