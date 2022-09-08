@@ -5,7 +5,7 @@
 ![](https://img.shields.io/github/watchers/ariadata/dc-gitlab.svg)
 ![](https://img.shields.io/github/forks/ariadata/dc-gitlab.svg)
 
-> This needs : [nginx-proxy-manager with docker-compose](https://github.com/ariadata/dc-nginxproxymanager) .
+### This needs : [dockerhost](https://github.com/ariadata/dockerhost-sh) + [nginx-proxy-manager](https://github.com/ariadata/dc-nginxproxymanager)
 
 ---
 #### 1- Change ssh port `via root user` (NOT 22) :
