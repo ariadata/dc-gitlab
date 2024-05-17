@@ -46,6 +46,13 @@ Notify.test_email('you@example.com', 'Message Subject', 'Message Body').deliver_
 
 #### 9- goto : `https://Your-FQDN/`
 
+#### 10- Update access_token expire by name:
+```sh
+docker exec -it gitlab bash
+# add extra 10 years
+gitlab-rails r "PersonalAccessToken.active.where(name: 'token_name').update_all(expires_at: 10.year.from_now)"
+```
+
 Done!
 
 
